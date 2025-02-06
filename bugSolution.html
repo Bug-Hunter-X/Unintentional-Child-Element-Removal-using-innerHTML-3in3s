@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Correct method using insertAdjacentHTML to add new content without removing existing children
+    const myDiv = document.getElementById("myDiv");
+    myDiv.insertAdjacentHTML('beforeend', '<p>New Text</p><span>This is appended</span>');
+  </script>
+</body>
+</html>
