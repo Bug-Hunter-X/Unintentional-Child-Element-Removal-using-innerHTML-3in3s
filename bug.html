@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrectly using innerHTML to modify the content of a div that contains child elements.
+    document.getElementById("myDiv").innerHTML = "<p>New text.</p><span>This will be lost!</span>";
+  </script>
+</body>
+</html>
